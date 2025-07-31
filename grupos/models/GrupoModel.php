@@ -3,7 +3,7 @@ $ruta = dirname(dirname(dirname(__FILE__)));
 // die('llego a opciones'.$ruta);
 require_once($ruta.'/conexion/Conexion.php');
 
-class GrupoModel
+class GrupoModel extends Conexion
 {
     public function traerGrupos()
     {

@@ -1,7 +1,16 @@
 <?php
+$ruta = dirname(dirname(dirname(__FILE__)));
+// die($ruta); 
+require_once($ruta.'/grupos/models/GrupoModel.php');
 
 class opcionesView
 {
+    protected $grupoModel;
+
+    public function __construct()
+    {
+        $this->grupoModel = new GrupoModel();
+    }
 
     public function menuOpciones()
     {
@@ -14,6 +23,25 @@ class opcionesView
 
     public function mostrarOpciones()
     {
+        $grupos = $this->grupoModel->traerGrupos();
+            // echo ' llego a menu opcionesview';
+            echo '<div class="row"style="padding:10px;">'; 
+            foreach($grupos  as $grupo)
+            {
+            //     echo '<div 
+            //             style="color:green;
+            //             font-size: 16px; 
+            //             border: 2px solid black; 
+            //             border-radius: 20px;" 
+            //             class="mt-2" width="50px; 
+            //             >'.$grupo['nombre'].'</div>';
+            // }
+            // echo '</div>';
+            echo '<button 
+                        class="btn btn-primary btn-lg mt-2"
+                        onclick="traerProductosIdGrupo('.$grupo["id"].');"
+                    >'.$grupo["nombre"].'</button>';
+            }
         ?>
 
 

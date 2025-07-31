@@ -103,9 +103,10 @@ class dashboardView{
                         </div>
                     </div>
 
-                    <div class="row" style="flex-grow: 1; height: calc(100vh - 20vh); "> 
-                        <div class="col-lg-1 columna-contenido columna1">
+                    <div class="row" style="flex-grow: 1; height: calc(100vh - 20vh);"> 
+                        <div class="col-lg-2 columna-contenido columna1" id="columna1Dashboard" >
                             <h3>Produtos</h3>
+                           
                             
                         </div>
                         
@@ -113,7 +114,7 @@ class dashboardView{
                             Contenido de la Columna Central
                         </div>
 
-                        <div class="col-lg-4 columna-contenido columna-tercera">
+                        <div class="col-lg-3 columna-contenido columna-tercera">
                             Contenido de la Columna Derecha
                         </div>
                     </div>
@@ -127,6 +128,7 @@ class dashboardView{
             </body>
             </html>
             <script src="../dashboard/js/dashboard.js"></script>
+            <script src="../grupos/js/grupos.js"></script>
         <?php
     }
 
